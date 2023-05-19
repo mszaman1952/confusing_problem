@@ -13,7 +13,7 @@ exports.saveUsers = ({ body: { name, age } }, res) => {
   // var age = Number(age)
   const user = {
     name,
-    age,
+    age : parseInt(age);
   };
   users.push(user);
   res.status(201).json({
